@@ -1,0 +1,47 @@
+header {
+  padding: 10px 0px;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  color:white;
+}
+header nav{
+  margin: 0 auto;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+  padding: 2px;
+}
+header div{
+  margin: 0 auto;
+}
+header div input{
+  width: 12vw;
+  height: 5vh;
+  border-radius: 4px;
+}
+header div button{
+  width: 6vw;
+  height: 5vh;
+  border-radius: 4px;
+  background-color: black;
+  color: greenyellow;
+  border: greenyellow 1px solid;
+}
+
+
+form {
+  margin: 4vh auto;
+  display: grid;
+  grid-row: 2;
+  align-self: center;
+  grid-template-columns: auto;
+  font-size: 24px;
+  max-height: 60vh;
+  max-width: 80vw;
+  background-color: aquamarine;
+  border-radius: 20px;
+  text-align: center;
+}
