@@ -1,8 +1,8 @@
 <%= render 'header'%>
 
-<h1>Creating a new Article</h1>
-
 <%= render 'validation_errors'%>
 <%= render 'form' %>
+<div class="buttons_div">
+  <%= link_to 'Return to articles listing', articles_path, :class => 'return_link'%>
+</div>
 
-<%= link_to 'Return to articles listing', articles_path %>
