@@ -1,6 +1,4 @@
-<div class="form">
-  <img src="https://www.easel.ly/blog/wp-content/uploads/2019/05/text-vs-visuals-which-is-more-effective.png" alt="">
-  <%= form_with( model: @article, local:true ) do |f|%>
+ <%= form_with( model: @article, local:true ) do |f|%>
     
     <p>
       <%= f.label :title %> <br/>
@@ -16,5 +14,4 @@
       <%= f.submit %>
     </p>
     
-  <%end%>
-</div>
+<%end%>
