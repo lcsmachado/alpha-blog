@@ -2,20 +2,15 @@ class UsersController < ApplicationController
 
   before_action :set_users, only: [:edit, :update, :show]
 
+  def index
+    @users = User.all
+  end
+
   def show
     @articles = @user.articles
   end
   
   def edit
-  end
-
-  def update
-    if @user.update(user_params)
-      flash[:notice] = "Your user information was successfully updated"
-      redirect_to articles_path
-    else
-      render 'edit'
-    end
   end
 
   def new
@@ -27,9 +22,18 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = "Welcome to Alpha blog, you have successfully signed up, #{@user.username}"
-      redirect_to articles_path
+      redirect_to @user
     else
       render 'new'
+    end
+  end
+
+  def update
+    if @user.update(user_params)
+      flash[:notice] = "Your user information was successfully updated"
+      redirect_to @user
+    else
+      render 'edit'
     end
   end
 
