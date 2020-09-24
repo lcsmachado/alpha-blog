@@ -17,4 +17,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def require_not_logged_in
+    if logged_in?
+      flash[:alert] = "You must not be logged in to perform this action"
+      redirect_to root_path
+    end
+  end
 end
